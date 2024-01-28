@@ -31,7 +31,7 @@ jobs:
           npm install -g @angular/cli
 
       - name: Build Angular Project
-        run: ng build
+        run: ng build --prod
 
       - name: Build And Deploy
         id: builddeploy
