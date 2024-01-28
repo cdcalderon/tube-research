@@ -1,0 +1,22 @@
+.main-content {
+  display: flex;
+  flex-direction: row; /* Children laid out in a row */
+}
+
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow chat area to grow and take available horizontal space */
+  max-height: calc(100vh - 100px); /* Adjust based on header and input area height */
+  height: calc(100vh - 100px);;
+}
+
+.chat-body {
+  overflow-y: auto; /* Enable scrolling for overflow content */
+  flex-grow: 1; /* Grow within chat-area container */
+}
+
+.right-column {
+  /* Styles for the right column */
+  width: 40%; /* or any desired width */
+}

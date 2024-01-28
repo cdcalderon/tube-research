@@ -14,9 +14,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'tube-research';
-  youtubeUrl: string = '';
+  youtubeUrl: string = 'https://www.youtube.com/watch?v=AbCTlemwZ1k';
   transcript: string = '';
-  userPrompt: string = '';
+  userPrompt: string = 'summarize';
   messages: ChatMessage[] = [
     { content: "Message from User 1", sender: "User" },
     { content: "Message from AI 1", sender: "AI" },
