@@ -43,9 +43,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_BAY_0979E5A10 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          app_location: "./" # App source code path
+          app_location: "/app" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "./dist/tube-research" # Built app content directory
+          output_location: "dist/tube-research" # Built app content directory
           skip_app_build: true # Skip the Oryx build process
 
   close_pull_request_job:
