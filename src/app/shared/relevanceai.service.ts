@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class RelevanceAIService {
 relevanceAiUrlBase = 'https://api-bcbe5a.stack.tryrelevance.com/latest/studios/7557f99d-b7a4-4e28-b181-c73de1598a2c/trigger_limited'
+transcriptApiUrl = 'http://localhost:3000/transcript'; // Add your API base URL here
+
   constructor(private http: HttpClient) {
 
   }
@@ -22,5 +24,9 @@ relevanceAiUrlBase = 'https://api-bcbe5a.stack.tryrelevance.com/latest/studios/7
     };
 
     return this.http.post<RelevanceAIResponse>(this.relevanceAiUrlBase, payload);
+  }
+
+  fetchTranscript(videoId: string): Observable<string> {
+    return this.http.get(`${this.transcriptApiUrl}/${videoId}`, { responseType: 'text' });
   }
 }
