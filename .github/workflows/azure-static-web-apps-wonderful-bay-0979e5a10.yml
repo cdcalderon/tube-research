@@ -31,7 +31,10 @@ jobs:
           npm install -g @angular/cli
 
       - name: Build Angular Project
-        run: ng build --prod
+        run: |
+          ng build
+          echo "Listing build artifacts..."
+          ls -l dist/tube-research
 
       - name: Build And Deploy
         id: builddeploy
